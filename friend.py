@@ -47,7 +47,7 @@ def sort_by_num_friends():
     num_friends_list = []
     for user in users:
         friends_count = num_friends(user["id"])
-        num_friends_list.append({"name": user["name"], "num_friends": friends_count})
+        num_friends_list.append({"id": user["id"], "name": user["name"], "num_friends": friends_count})
 
     #Sort lists according to num_friends, from most to least
     sorted_list = sorted(
@@ -55,7 +55,7 @@ def sort_by_num_friends():
     
     #Print list
     for user in sorted_list:
-        print("%s has %d friends" % (user["name"], user["num_friends"]))
+        print("ID %d %s has %d friends" % (user["id"], user["name"], user["num_friends"]))
 
 
 sort_by_num_friends()
